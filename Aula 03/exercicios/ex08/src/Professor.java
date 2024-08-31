@@ -1,10 +1,10 @@
 public class Professor {
-    public String nome;
-    public String disciplina;
-    public double salario;
-    public int energia = 10;
+    private String nome;
+    private String disciplina;
+    private Double salario;
+    private Integer energia = 10;
 
-    public Professor(String nome, String disciplina, double salario) {
+    public Professor(String nome, String disciplina, Double salario) {
         this.nome = nome;
         this.disciplina = disciplina;
         this.salario = salario;
@@ -19,6 +19,44 @@ public class Professor {
         }
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDisciplina() {
+        return disciplina;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public int getEnergia() {
+        return energia;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDisciplina(String disciplina) {
+        if(disciplina == null) return;
+        if(disciplina == "") return;
+        this.disciplina = disciplina;
+    }
+
+    public void setSalario(Double salario) {
+        if(salario == null) return;
+        if(salario < 0) return;
+        this.salario = salario;
+    }
+
+    public void setEnergia(Integer energia) {
+        if(energia == null) return;
+        if(energia < 0 || energia > 10) return;
+        this.energia = energia;
+    }
+
     public void corrigirProva() {
         if(energia <= 0) {
             System.out.println("Muito cansado para corrigir provas!\nDescanse um pouco!");
@@ -27,4 +65,6 @@ public class Professor {
             energia -= 1;
         }
     }
+
+
 }

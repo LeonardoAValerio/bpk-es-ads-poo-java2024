@@ -4,6 +4,6 @@ public class Main {
         leonardo.adicionarNota(80.0);
         leonardo.adicionarNota(90.0);
         leonardo.adicionarNota(100.0);
-        System.out.println(leonardo.getMedia()); // 90.0
+        System.out.println(leonardo); // 90.0
     }
 }
