@@ -40,9 +40,9 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return "rua='" + rua + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", cidade='" + cidade + '\'' +
-                ", logradouro='" + logradouro + '\'';
+        return rua +
+                ", " + logradouro +
+                ", " + bairro +
+                ", " + cidade;
     }
 }

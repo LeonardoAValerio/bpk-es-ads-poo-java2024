@@ -45,9 +45,9 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "nome=" + nome + '\n' +
-                "cpf=" + cpf + '\n' +
-                "telefone=" + telefone + '\n' +
-                "enderecoAtual=" + getEnderecoAutual();
+        return "Cliente: " + nome +
+                ", " + cpf +
+                ", " + telefone +
+                ", Endereco:" + getEnderecoAutual();
     }
 }

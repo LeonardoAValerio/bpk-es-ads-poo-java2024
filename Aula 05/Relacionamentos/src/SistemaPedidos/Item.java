@@ -3,12 +3,13 @@ package SistemaPedidos;
 public class Item {
     private Integer quantidade;
     private Produto produto;
-    private Double valorTotal;
+    private Double subTotal;
 
     public Item(Integer quantidade, Produto produto) {
         this.quantidade = quantidade;
         this.produto = produto;
-        valorTotal = quantidade * this.produto.getValor();
+        this.produto.diminuirEstoque(quantidade);
+        subTotal = quantidade * this.produto.getValor();
     }
 
     public Integer getQuantidade() {
@@ -19,16 +20,14 @@ public class Item {
         return produto;
     }
 
-    public Double getValorTotal() {
-        return valorTotal;
+    public Double getSubTotal() {
+        return subTotal;
     }
 
     @Override
     public String toString() {
-        return "Item{" +
-                "quantidade=" + quantidade +
-                ", " + produto +
-                ", valorTotal=" + valorTotal +
-                '}';
+        return  produto +
+                ", Quantidade: " + quantidade +
+                ", Subtotal: R$" + subTotal;
     }
 }
